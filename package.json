@@ -1,0 +1,9 @@
+{
+  "name": "JSChatApp",
+  "version": "0.0.0",
+  "description": "proof of concept for js chatting app using node js and socket.io",
+  "dependencies": {
+    "express": "^4.11.0",
+    "socket.io": "^1.2.1"
+  }
+}
