@@ -1,4 +1,5 @@
-var app = require('express')();
+var express = require('express')
+  , app = express();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
 
@@ -6,6 +7,8 @@ app.get('/', function(req, res){
   //res.send('<h1>TEST</h1>');
   res.sendFile(__dirname + '/index.html');
 });
+
+app.use(express.static(__dirname + '/css'));
 
 io.on('connection', function(socket){
   socket.on('chat message', function(msg){
